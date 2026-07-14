@@ -12,16 +12,16 @@ O estudo investiga como estudantes do Ensino Médio compreendem a presença da Q
 - Matheus Marques Ribeiro
 - Maria Eunice Ribeiro Marcondes
 
-## Conteúdo do diretório
+## Conteúdo do repositório
 
-| Arquivo                                                                                                                                                 | Descrição                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [`Base de Dados MG.csv`](./dados/Base%20de%20Dados%20MG.csv)                                                                                            | Base analítica de Minas Gerais, com respostas de 97 estudantes e 46 variáveis. |
-| [`Dados SP N200.csv`](./dados/Dados%20SP%20N200.csv)                                                                                                    | Base de São Paulo, com respostas de 200 estudantes e 181 variáveis.            |
-| [`Inquérito sobre as visões, preocupações e ações - MG.pdf`](./instrumentos/Inquérito%20sobre%20as%20visões%2C%20preocupações%20e%20ações%20-%20MG.pdf) | Instrumentos utilizados na pesquisa realizada em Minas Gerais.                 |
-| [`Inquérito sobre as visões, preocupações e ações - SP.pdf`](./instrumentos/Inquérito%20sobre%20as%20visões%2C%20preocupações%20e%20ações%20-%20SP.pdf) | Instrumento utilizado na pesquisa realizada em São Paulo.                      |
-| [`parecer-cep-sp-3360334-aprovado.pdf`](./documentacao-etica/parecer-cep-sp-3360334-aprovado.pdf)                                                       | Parecer final de aprovação ética da pesquisa realizada em São Paulo.           |
-| [`parecer-cep-mg-4028899-aprovado.pdf`](./documentacao-etica/parecer-cep-mg-4028899-aprovado.pdf)                                                       | Parecer final de aprovação ética da pesquisa realizada em Minas Gerais.        |
+| Arquivo | Descrição |
+|---|---|
+| [`Dados MG N97.csv`](./Dados%20MG%20N97.csv) | Base analítica de Minas Gerais, com respostas de 97 estudantes e 46 variáveis. |
+| [`Dados SP N200.csv`](./Dados%20SP%20N200.csv) | Base de São Paulo, com respostas de 200 estudantes e 181 variáveis. |
+| [`Inquérito sobre as visões, preocupações e ações - MG.pdf`](./Inqu%C3%A9rito%20sobre%20as%20vis%C3%B5es%2C%20preocupa%C3%A7%C3%B5es%20e%20a%C3%A7%C3%B5es%20-%20MG.pdf) | Instrumentos utilizados na pesquisa realizada em Minas Gerais. |
+| [`Inquérito sobre as visões, preocupações e ações - SP.pdf`](./Inqu%C3%A9rito%20sobre%20as%20vis%C3%B5es%2C%20preocupa%C3%A7%C3%B5es%20e%20a%C3%A7%C3%B5es%20-%20SP.pdf) | Instrumento utilizado na pesquisa realizada em São Paulo. |
+| [`Parecer CEP — São Paulo`](./PB_PARECER_CONSUBSTANCIADO_CEP_3360334%20-%20Matheus.pdf) | Parecer final de aprovação ética da pesquisa realizada em São Paulo. |
+| [`Parecer CEP — Minas Gerais`](./PB_PARECER_CONSUBSTANCIADO_CEP_4028899%20-%20Rani.pdf) | Parecer final de aprovação ética da pesquisa realizada em Minas Gerais. |
 
 ## Características dos conjuntos de dados
 
@@ -86,35 +86,31 @@ A interpretação dos dados deve ser realizada com apoio deste README e dos inst
 
 ### Python
 
-```python
 import pandas as pd
 
 dados_mg = pd.read_csv(
-    "dados/Base de Dados MG.csv",
+    "Dados MG N97.csv",
     sep=";",
     encoding="utf-8-sig"
 )
 
 dados_sp = pd.read_csv(
-    "dados/Dados SP N200.csv",
+    "Dados SP N200.csv",
     sep=";",
     encoding="utf-8-sig"
 )
-```
 
 ### R
 
-```r
 dados_mg <- read.csv2(
-  "dados/Base de Dados MG.csv",
+  "Dados MG N97.csv",
   fileEncoding = "UTF-8-BOM"
 )
 
 dados_sp <- read.csv2(
-  "dados/Dados SP N200.csv",
+  "Dados SP N200.csv",
   fileEncoding = "UTF-8-BOM"
 )
-```
 
 ## Escalas de resposta da base de São Paulo
 
@@ -149,11 +145,11 @@ Para interpretar o enunciado de cada variável, consulte o instrumento em PDF co
 
 ## Observação sobre a conversão da base de Minas Gerais
 
-O arquivo `Base de Dados MG.csv` foi gerado diretamente a partir da base original em formato SPSS.
+O arquivo `Dados MG N97.csv` foi gerado diretamente a partir da base original em formato SPSS.
 
 A conversão eliminou o problema de cabeçalho observado em uma versão anterior do CSV, na qual uma coluna aparecia como `V.1` entre `V.18` e `V.20`.
 
-A nova base não corresponde apenas à correção daquele cabeçalho. Trata-se de uma base analítica reduzida e harmonizada, com 46 variáveis, que não contém a sequência de itens `V.1` a `V.20`.
+A base disponibilizada corresponde à base analítica reduzida e harmonizada, com 97 participantes e 46 variáveis. Ela não contém a sequência de itens `V.1` a `V.20`.
 
 ## Aspectos éticos
 
@@ -170,7 +166,7 @@ As pesquisas que deram origem aos conjuntos de dados foram submetidas à aprecia
 * **Data do parecer:** 31 de maio de 2019;
 * **Apreciação pela CONEP:** Não necessária.
 
-[Consultar o parecer de aprovação da pesquisa de São Paulo](./documentacao-etica/parecer-cep-sp-3360334-aprovado.pdf)
+[Consultar o parecer de aprovação da pesquisa de São Paulo](./PB_PARECER_CONSUBSTANCIADO_CEP_3360334%20-%20Matheus.pdf)
 
 ### Pesquisa realizada em Minas Gerais
 
@@ -183,7 +179,7 @@ As pesquisas que deram origem aos conjuntos de dados foram submetidas à aprecia
 * **Data do parecer:** 14 de maio de 2020;
 * **Apreciação pela CONEP:** Não necessária.
 
-[Consultar o parecer de aprovação da pesquisa de Minas Gerais](./documentacao-etica/parecer-cep-mg-4028899-aprovado.pdf)
+[Consultar o parecer de aprovação da pesquisa de Minas Gerais](./PB_PARECER_CONSUBSTANCIADO_CEP_4028899%20-%20Rani.pdf)
 
 Os pareceres comprovam a aprovação ética dos protocolos e procedimentos de pesquisa. Eles não devem ser interpretados como uma autorização específica dos Comitês de Ética para a publicação dos arquivos em uma plataforma de dados abertos.
 
@@ -207,17 +203,18 @@ Não devem ser empregados para:
 
 Enquanto o artigo e o conjunto de dados não possuírem DOI, sugere-se a seguinte referência provisória:
 
-> SILVA, Raniele Aparecida da; RIBEIRO, Matheus Marques; MARCONDES, Maria Eunice Ribeiro. **Dados e instrumentos da pesquisa “Visões, preocupações e ações sobre a Química”**. GitHub, 2026. Disponível em: `https://github.com/MatheusMarquesRibeiro/academicdata`.
+> SILVA, Raniele Aparecida da; RIBEIRO, Matheus Marques; MARCONDES, Maria Eunice Ribeiro. **Dados e instrumentos da pesquisa “Visões, preocupações e ações sobre a Química”**. GitHub, 2026. Disponível em: `https://github.com/MatheusMarquesRibeiro/dados-vpa`.
 
 Após a publicação do artigo ou o arquivamento de uma versão do repositório em uma plataforma com DOI, esta seção deverá ser atualizada.
 
 Ao utilizar os dados, cite também o artigo correspondente.
 
+
 ## Licença
 
-O repositório está disponibilizado sob a licença **CC0 1.0 Universal**, conforme o arquivo [`LICENSE`](../LICENSE).
+Pretende-se disponibilizar este conjunto de dados sob a licença **CC0 1.0 Universal**.
 
-Embora a licença permita ampla reutilização, solicita-se a citação dos autores e da fonte como prática de integridade e reconhecimento acadêmico.
+O arquivo específico de licença será incorporado à raiz do repositório. Independentemente das permissões de reutilização, solicita-se a citação dos autores e da fonte como prática de integridade e reconhecimento acadêmico.
 
 ## Contato
 
