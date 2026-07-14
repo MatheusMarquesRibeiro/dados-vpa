@@ -226,10 +226,3 @@ E-mail: [ribeiro.m.marques@gmail.com](mailto:ribeiro.m.marques@gmail.com)
 
 Dúvidas sobre os dados, os instrumentos, a documentação ética ou as condições de reutilização podem ser encaminhadas ao contato acima.
 
-````
-
-No navegador do GitHub: abra o `README.md`, clique no lápis, use `Ctrl + A`, substitua todo o texto, clique em **Commit changes** e escreva como descrição:
-
-```text
-Atualiza documentação dos dados e pareceres éticos
-````
